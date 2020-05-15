@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="c010b266-182d-4b25-b74b-1afa7e9792d7" Name="FATE怪物检测" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="参天骏雕监测【请站在FATE点上使用】" Id="f1e73890-9d17-49ef-83f1-7249fe8203ed" RegularExpression="Added new combatant (参天骏雕).*?Level: 50" Scheduling="FromRefirePeriod" RefirePeriodExpression="6000*1000">
+        <Actions>
+          <Action OrderNumber="1" SystemBeepFreqExpression="500" SystemBeepLengthExpression="300" UseTTSTextExpression="FATE.龙卵引起的战争.出现" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireInterrupt="True" RefireRequeue="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="石人英雄监测【请站在FATE点上使用】" Id="a718d3d1-a595-4040-a22c-321b5f897e4f" RegularExpression="Added new combatant (格尔该朝鲁).*?Level: 65" PrevActions="Interrupt" RefirePeriodExpression="6000*1000">
+        <Actions>
+          <Action OrderNumber="1" SystemBeepFreqExpression="500" SystemBeepLengthExpression="300" UseTTSTextExpression="FATE.石人英雄.格尔该朝鲁.出现" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireInterrupt="True" RefireRequeue="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=799646951&amp;token=cola13624651&amp;group=864554075" DiscordWebhookMessage="石板FATE出了来个人打打 by可乐" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="北萨监测【请站在FATE点上使用】" Id="168bde86-0d98-4dd5-9e40-db167a91c45b" RegularExpression="Added new combatant (艾玛吉娜矿山公司的技术工)." Scheduling="FromRefirePeriod" RefirePeriodExpression="6000*1000">
+        <Actions>
+          <Action OrderNumber="1" SystemBeepFreqExpression="500" SystemBeepLengthExpression="300" UseTTSTextExpression="FATE.核心危机.出现" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" RefireInterrupt="True" RefireRequeue="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
